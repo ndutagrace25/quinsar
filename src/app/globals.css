@@ -118,17 +118,8 @@
   * {
     @apply border-border outline-ring/50;
   }
-  html,
-  body,
-  body * {
-    font-family: "Montserrat", "Inter", "Open Sans", "Roboto", sans-serif !important;
-  }
-  html {
-    font-family: "Montserrat", "Inter", "Open Sans", "Roboto", sans-serif !important;
-  }
   body {
     @apply bg-background text-foreground;
-    font-family: "Montserrat", "Inter", "Open Sans", "Roboto", sans-serif !important;
   }
   h1,
   h2,
@@ -136,10 +127,6 @@
   h4,
   h5,
   h6 {
-    font-family: "Montserrat", "Inter", sans-serif !important;
     font-weight: 600;
-  }
-  p, span, div, a, button, input, textarea, select, label, li, ul, ol {
-    font-family: "Montserrat", "Inter", "Open Sans", "Roboto", sans-serif !important;
   }
 }

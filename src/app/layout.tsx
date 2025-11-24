@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Quinsar Restaurant - Authentic Dining Experience",
@@ -23,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className="antialiased" style={{ fontFamily: '"Montserrat", "Inter", "Open Sans", "Roboto", sans-serif' }}>
+    <html lang="en" className={`dark ${montserrat.variable}`}>
+      <body className={`antialiased ${montserrat.className}`}>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
