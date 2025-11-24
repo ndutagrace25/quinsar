@@ -61,13 +61,40 @@ Update the following files with your actual restaurant information:
    - Replace the Google Maps embed URL with your restaurant's location
    - Get your embed code from [Google Maps](https://www.google.com/maps)
 
-### Update Google Reviews
+### Setup Google Reviews
 
-Edit `src/components/GoogleReviews.tsx` to:
+To display real Google Reviews on your website:
 
-- Add your actual Google Reviews link
-- Update review data with real customer reviews
-- Adjust the average rating and review count
+1. **Get Google Places API Key:**
+
+   - Go to [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a new project or select an existing one
+   - Enable "Places API" and "Maps JavaScript API"
+   - Create credentials (API Key)
+   - Restrict the API key to only Places API for security
+
+2. **Get Your Place ID:**
+
+   - Find your Place ID from your Google Maps link
+   - Or use [Google Place ID Finder](https://developers.google.com/maps/documentation/places/web-service/place-id)
+   - Or check your Google Business Profile
+
+3. **Configure Environment Variables:**
+
+   - Create a `.env.local` file in the root directory
+   - Add your API key and Place ID:
+     ```
+     GOOGLE_PLACES_API_KEY=your_api_key_here
+     GOOGLE_PLACE_ID=your_place_id_here
+     ```
+   - **Important:** Never commit `.env.local` to git (it's already in .gitignore)
+
+4. **Test the Integration:**
+   - Restart your dev server after adding environment variables
+   - The reviews should automatically load from Google
+   - Reviews are cached for 1 hour to reduce API calls
+
+**Note:** The Google Reviews component will automatically fall back to showing a link if the API is not configured or fails.
 
 ### Customize Content
 
@@ -151,4 +178,5 @@ For issues or questions, please refer to the Next.js documentation or create an 
 ## License
 
 This project is private and proprietary.
+
 # quinsar
