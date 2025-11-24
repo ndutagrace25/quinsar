@@ -146,7 +146,7 @@ export default function MenuPage() {
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <CardTitle className="text-xl">{item.name}</CardTitle>
-                        <span className="text-lg font-bold text-primary">{item.price}</span>
+                        <span className="text-sm md:text-lg font-bold text-primary">{item.price}</span>
                       </div>
                       <CardDescription>{item.description}</CardDescription>
                     </CardHeader>
