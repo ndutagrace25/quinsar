@@ -8,31 +8,39 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section with Video */}
-      <section className="relative h-screen w-full overflow-hidden">
-        <iframe
-          className="absolute inset-0 h-full w-full object-cover pointer-events-none"
-          src="https://www.youtube.com/embed/Txx3TsCjE08?autoplay=1&mute=1&loop=1&playlist=Txx3TsCjE08&controls=0&showinfo=0&modestbranding=1"
-          title="Quinsar Restaurant"
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          allowFullScreen
-        />
+      <section className="relative min-h-svh w-full overflow-hidden">
+        {/* Background YouTube Video */}
+        <div className="absolute inset-0 overflow-hidden">
+          <iframe
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-svh w-[calc(100svh*16/9)] min-h-full min-w-full pointer-events-none"
+            src="https://www.youtube.com/embed/Txx3TsCjE08?autoplay=1&mute=1&loop=1&playlist=Txx3TsCjE08&controls=0&modestbranding=1&playsinline=1&rel=0"
+            title="Quinsar Restaurant"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        </div>
 
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+
+        {/* Content */}
+        <div className="relative z-10 flex min-h-svh flex-col items-center justify-center px-4 text-center text-white">
           <h1 className="mb-4 text-4xl font-bold md:text-6xl lg:text-7xl">
             Welcome to Quinsar Restaurant
           </h1>
+
           <p className="mb-8 max-w-2xl text-lg md:text-xl">
-            Experience exceptional dining with authentic flavors and warm
-            hospitality
+            Experience exceptional dining with authentic flavors and warm hospitality
           </p>
+
           <div className="flex flex-col gap-4 sm:flex-row">
             <Button asChild size="lg" className="text-lg">
               <Link href="/menu">
                 View Menu <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
+
             <Button
               asChild
               variant="outline"
