@@ -9,15 +9,15 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section with Video */}
       <section className="relative h-screen w-full overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source src="/images/video.mp4" type="video/mp4" />
-        </video>
+        <iframe
+          className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+          src="https://www.youtube.com/embed/Txx3TsCjE08?autoplay=1&mute=1&loop=1&playlist=Txx3TsCjE08&controls=0&showinfo=0&modestbranding=1"
+          title="Quinsar Restaurant"
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+        />
+
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
           <h1 className="mb-4 text-4xl font-bold md:text-6xl lg:text-7xl">

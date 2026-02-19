@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card,  CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Utensils, Coffee, Wine, Star, Soup, Beef, Fish, LeafyGreen, Cookie, IceCream, GlassWater } from "lucide-react";
+import { Utensils, Coffee, Soup, Beef, Fish, LeafyGreen, Cookie, IceCream, GlassWater } from "lucide-react";
 
 export const metadata = {
   title: "Menu - Quinsar Restaurant",
