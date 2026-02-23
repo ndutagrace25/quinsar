@@ -81,7 +81,7 @@ export default function MenuPage() {
       title: "Snacks",
       icon: Cookie,
       items: [
-        { name: "Andazi", description: "", price: "KES 50", image: "/images/andazi.jpeg" },
+        { name: "Andazi", description: "", price: "KES 50", image: "/images/andazi.jpg" },
         { name: "Samosa", description: "", price: "KES 70", image: "/images/samosa.jpg" },
         { name: "Sausages", description: "", price: "KES 80", image: "/images/sausages.jpg" },
         { name: "Sausages Roast", description: "", price: "KES 100", image: "/images/roast_sausage.jpeg" },
