@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card,  CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Award, Users, Utensils } from "lucide-react";
 
 export const metadata = {
@@ -38,7 +38,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] w-full overflow-hidden">
         <Image
-          src="/images/pexels-pixabay-262978.jpg"
+          src="/images/about.jpg"
           alt="Quinsar Restaurant"
           fill
           className="object-cover"
@@ -81,7 +81,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-96 w-full overflow-hidden rounded-lg">
               <Image
-                src="/images/pexels-helenalopes-693269.jpg"
+                src="/images/origin.jpg"
                 alt="Restaurant Interior"
                 fill
                 className="object-cover"
@@ -130,8 +130,8 @@ export default function AboutPage() {
               <CardHeader>
                 <CardTitle>Signature Dishes</CardTitle>
                 <CardDescription>
-                  Our chef's special recipes, perfected over years, feature unique flavors
-                  and presentation that you won't find anywhere else.
+                  Our chef&apos;s special recipes, perfected over years, feature unique flavors
+                  and presentation that you won&apos;t find anywhere else.
                 </CardDescription>
               </CardHeader>
             </Card>
