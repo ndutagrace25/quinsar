@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Utensils, Coffee, Soup, Beef, Fish, LeafyGreen, Cookie, IceCream, GlassWater } from "lucide-react";
+import { Coffee, Soup,  Cookie,  GlassWater, Egg, FileDown } from "lucide-react";
 
 export const metadata = {
   title: "Menu - Quinsar Restaurant",
@@ -28,58 +28,52 @@ export default function MenuPage() {
       title: "Soups",
       icon: Soup,
       items: [
-        { name: "Easy Goat Soup", description: "Hearty goat soup with traditional spices", price: "KES 450", image: "/images/soup1.jpg" },
-        { name: "Healthy Chicken Kienyeji Soup", description: "Free-range chicken soup with fresh vegetables", price: "KES 400", image: "/images/soup2.jpg" },
-        { name: "Creamy Pumpkin Soup", description: "Smooth and creamy pumpkin soup", price: "KES 350", image: "/images/soup3.jpg" },
+        { name: "Easy Goat Soup", description: "Well boiled natural African soup with full of flavor", price: "KES 150", image: "/images/goat_soup.jpg" },
+        { name: "Healthy Chicken Kienyeji Soup (With 1/8 a piece)", description: "Traditionally pot prepared and inspired with no any other flavor, totally irresistible and so hearty", price: "KES 250", image: "/images/chicken_soup.png" },
+        { name: "Creamy Pumpkin Soup", description: "Creamy, dreamy with sweet pumpkin flavor and great savoury undertone served with plain toast", price: "KES 250", image: "/images/pumkin_soup.jpg" },
       ],
     },
     {
-      id: "steaks",
-      title: "Steaks",
-      icon: Beef,
+      id: "eggs",
+      title: "Eggs",
+      icon: Egg,
       items: [
-        { name: "Beef Tenderloin Steak", description: "Premium beef tenderloin, served with ugali, rice, or chapati", price: "KES 500", image: "/images/steak1.jpg" },
-        { name: "Classic Flame-Grilled Beef Steak", description: "Flame-grilled beef steak, served with ugali, rice, or chapati", price: "KES 480", image: "/images/steak2.jpg" },
-        { name: "Beef Tenderloin Steak", description: "Premium beef tenderloin, served with ugali, rice, or chapati", price: "KES 500", image: "/images/steak3.jpg" },
+        { name: "Fried Eggs", description: "Fried eggs with onions and tomatoes", price: "KES 120", image: "/images/FriedEggs.jpg" },
+        { name: "Fried Eggs Kienyeji", description: "Fried eggs with onions and tomatoes", price: "KES 120", image: "/images/egg_kienyeji.jpg" },
+        { name: "Boilled Eggs", description: "Boilled eggs with onions and tomatoes", price: "KES 160", image: "/images/biled_eggs.jpg" },
+        { name: "Spanish Omelette", description: "Spanish omelette with onions and tomatoes", price: "KES 160", image: "/images/omelette.jpg" },
+        { name: "Scrambled Eggs", description: "Scrambled eggs with onions and tomatoes", price: "KES 160", image: "/images/scrambled.jpg" },
       ],
     },
     {
-      id: "chicken",
-      title: "Chicken",
-      icon: Utensils,
+      id: "hot_beverages",
+      title: "Hot Beverages",
+      icon: GlassWater,
       items: [
-        { name: "Traditional Kienyeji Chicken", description: "Free-range chicken, served with ugali, rice, chapati, or chips", price: "KES 450", image: "/images/chicken1.jpg" },
-        { name: "Chicken Stir-Fry", description: "Tender chicken stir-fry, served with ugali, rice, chapati, or chips", price: "KES 420", image: "/images/chicken2.jpg" },
+        { name: "African Tea (Regular and Extra Large", description: "Classic Kenyan black tea brewed with milk and sugar (Optional) Smooth, comforting, and timeless", price: "KES 70 - KES 80", image: "/images/african_tea.jpg" },
+        { name: "Lemon Tea", description: "Light and refreshing black tea infused with fresh lemon. Perfect for cleansing and calming", price: "KES 80", image: "/images/lemon_tea.jpg" },
+        { name: "Masala Tea", description: "Bold and aromatic-brewed with spices like cardamon, ginger, cinnamon, and cloves. Fragrant, warming, and deeply satisfying.", price: "KES 100", image: "/images/masala.jpg" },
+        {
+          name: "Fresh Ginger Tea", description: "Made with freshly crushed ginger, gently simmered in hot water. Zesty, soothing, and great for digestion.", price: "KES 120", image: "/images/ginger_tea.jpg"
+        },
+        { name: "Hot Drinking Chocolate", description: "A rich, creamy blend of premium cocoa and hot milk, lightly sweetened and served steaming hot.", price: "KES 100", image: "/images/drinking_chocolate.jpg" },
+        { name: "Hot Milo", description: "A nourishing malted chocolate drink made with Milo powder and served steaming hot.", price: "KES 120", image: "/images/milo.jpg" },
+        { name: "Hot Cow Milk", description: "", price: "KES 100", image: "/images/cow_milk.jpg" },
+        { name: "White Coffee", description: "", price: "KES 100", image: "/images/white.jpg" },
+        { name: "Black Coffee", description: "", price: "KES 80", image: "/images/black.jpg" },
+        { name: "Lemon Coffee", description: "", price: "KES 100", image: "/images/lemon.jpg" },
       ],
     },
     {
-      id: "fish",
-      title: "Fish",
-      icon: Fish,
+      id: "special_hot_drinks",
+      title: "Special Hot Drinks",
+      icon: GlassWater,
       items: [
-        { name: "Pan-Fried Fish Fillets", description: "Fresh fish fillets pan-fried to perfection", price: "KES 400", image: "/images/fish1.jpg" },
-        { name: "Whole Wet-Fried Tilapia", description: "Whole tilapia wet-fried with traditional spices", price: "KES 450", image: "/images/fish2.jpg" },
-      ],
-    },
-    {
-      id: "vegetarian",
-      title: "Vegetarian & Stews",
-      icon: LeafyGreen,
-      items: [
-        { name: "Managu", description: "African nightshade with your choice of accompaniment", price: "KES 250", image: "/images/vegetarian1.jpg" },
-        { name: "Njahi Stew", description: "Black beans stew, served with your choice of accompaniment", price: "KES 300", image: "/images/vegetarian2.jpg" },
-        { name: "Githeri", description: "Mixed cereal (beans and maize), traditional Kenyan dish", price: "KES 280", image: "/images/vegetarian3.jpg" },
-      ],
-    },
-    {
-      id: "chips",
-      title: "Chips",
-      icon: Utensils,
-      items: [
-        { name: "Chips Masala", description: "Crispy chips with masala spices", price: "KES 200", image: "/images/chips1.jpg" },
-        { name: "Chips Eggs Fried", description: "Chips served with fried eggs", price: "KES 250", image: "/images/chips2.jpg" },
-        { name: "Chips Sausage", description: "Chips served with sausages", price: "KES 280", image: "/images/chips3.jpg" },
-        { name: "Chips Sausage", description: "Chips served with sausages", price: "KES 280", image: "/images/chips4.jpg" },
+        { name: "Dawa (Healing Honey Drink)", description: "A warm, soothing blend of pure honey, fresh ginger, lime juice, and hot water, hand-stirred to perfection.", price: "KES 150", image: "/images/dawa.jpg" },
+        { name: "Hot Lemonade", description: "A warm, revitalizing blend of fresh lemon juice, hot water, and a touch of honey.", price: "KES 120", image: "/images/lemonade.jpg" },
+        { name: "Herbal Tea", description: "A naturally caffeine-free infusion made from a calming blend of fresh herbs like mint, lemon grass, ginger.", price: "KES 120", image: "/images/herbal.jpg" },
+        { name: "Hibiscus Tea", description: "A bright, tangy infusion made from dried hibiscus petals, served hot or chilled.", price: "KES 150", image: "/images/hibiscus.jpg" },
+        { name: "Lemon Water", description: "A refreshing blend of fresh lemon juice, hot water, and a touch of honey.", price: "KES 40", image: "/images/lemon_water.jpg" },
       ],
     },
     {
@@ -87,33 +81,23 @@ export default function MenuPage() {
       title: "Snacks",
       icon: Cookie,
       items: [
-        { name: "Mandazi", description: "Classic Kenyan sweet fried bread", price: "KES 50", image: "/images/snacks1.jpg" },
-        { name: "Samosa", description: "Crispy pastry filled with spiced meat or vegetables", price: "KES 80", image: "/images/snacks2.jpg" },
-        { name: "Sausages", description: "Grilled sausages - perfect snack", price: "KES 150", image: "/images/snacks3.jpg" },
+        { name: "Andazi", description: "", price: "KES 50", image: "/images/andazi.jpeg" },
+        { name: "Samosa", description: "", price: "KES 70", image: "/images/samosa.jpg" },
+        { name: "Sausages", description: "", price: "KES 80", image: "/images/sausages.jpg" },
+        { name: "Sausages Roast", description: "", price: "KES 100", image: "/images/roast_sausage.jpeg" },
+        { name: "Toast Plain", description: "", price: "KES 60", image: "/images/Toast.jpg" },
+        { name: "Buttered Toast", description: "", price: "KES 80", image: "/images/buttered.jpg" },
+        { name: "Gwaci", description: "", price: "KES 140", image: "/images/gwaci.jpg" },
+        { name: "Nduma", description: "", price: "KES 140", image: "/images/nduma.jpg" },
+        { name: "Nduma Roasted", description: "", price: "KES 180", image: "/images/nduma2.jpg" },
+        { name: "Chapati (Quinsar's smashed pumpkin chapati", description: "", price: "KES 60", image: "/images/chapati.jpg" },
+        { name: "Brown Chapati", description: "", price: "KES 70", image: "/images/brown.jpg" },
+        { name: "Chapati Mayai (2)", description: "", price: "KES 200", image: "/images/chapati_mayai.jpg" },
+        { name: "French Toast (Toast Mayai)", description: "", price: "KES 180", image: "/images/french_toast.jpg" },
+        { name: "Chapati Rollex Mayai", description: "", price: "KES 180", image: "/images/rolex.jpg" },
       ],
     },
-    {
-      id: "desserts",
-      title: "Desserts",
-      icon: IceCream,
-      items: [
-        { name: "Ice Cream - Vanilla", description: "Creamy vanilla ice cream", price: "KES 150", image: "/images/dessert1.jpg" },
-        { name: "Ice Cream - Strawberry", description: "Fresh strawberry ice cream", price: "KES 150", image: "/images/dessert2.jpg" },
-        { name: "Ice Cream - Caramel", description: "Rich caramel ice cream", price: "KES 150", image: "/images/dessert3.jpg" },
-        { name: "Ice Cream - Caramel", description: "Rich caramel ice cream", price: "KES 150", image: "/images/dessert4.jpg" },
-      ],
-    },
-    {
-      id: "beverages",
-      title: "Beverages",
-      icon: GlassWater,
-      items: [
-        { name: "African Tea", description: "Traditional Kenyan tea, hot and aromatic", price: "KES 80", image: "/images/beverage1.jpg" },
-        { name: "Fresh Juices", description: "Selection of fresh fruit juices", price: "KES 150", image: "/images/beverage2.jpg" },
-        { name: "Fresh Juices", description: "Selection of fresh fruit juices", price: "KES 150", image: "/images/beverage3.jpg" },
-        { name: "Milkshakes", description: "Creamy milkshakes in various flavors", price: "KES 180", image: "/images/beverage4.jpg" },
-      ],
-    },
+
   ];
 
   return (
@@ -123,6 +107,16 @@ export default function MenuPage() {
         <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
           Discover our carefully crafted selection of dishes, made with the finest ingredients
         </p>
+        <a
+          href="/images/Breakfast%20Menu.pdf"
+          download="Quinsar-Breakfast-Menu.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        >
+          <FileDown className="h-5 w-5" aria-hidden />
+          Download Breakfast Menu (PDF)
+        </a>
       </div>
 
       <div className="space-y-16">
