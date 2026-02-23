@@ -110,7 +110,7 @@ export default function GalleryPage() {
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
             />
             <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/20" />
-            <div className="absolute bottom-0 left-0 right-0 translate-y-full bg-gradient-to-t from-black/60 to-transparent p-4 text-white transition-transform group-hover:translate-y-0">
+            <div className="absolute bottom-0 left-0 right-0 translate-y-full bg-linear-to-t from-black/60 to-transparent p-4 text-white transition-transform group-hover:translate-y-0">
               <p className="font-semibold">{image.alt}</p>
             </div>
           </div>
