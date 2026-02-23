@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Card,  CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Utensils, Coffee, Soup, Beef, Fish, LeafyGreen, Cookie, IceCream, GlassWater } from "lucide-react";
 
@@ -16,10 +16,11 @@ export default function MenuPage() {
       title: "Breakfast",
       icon: Coffee,
       items: [
-        { name: "Premium Breakfast", description: "Bacon, eggs, and sausage served with your choice of accompaniment", price: "KES 450" },
-        { name: "Gizzards Combo Breakfast", description: "Gizzards with eggs, served with your choice of accompaniment", price: "KES 400" },
-        { name: "Minji & Njahi Combo", description: "Green peas and black beans combo breakfast", price: "KES 350" },
-        { name: "Special Mini Breakfast", description: "Tea, sausages, and eggs - perfect light breakfast", price: "KES 300" },
+        { name: "Quinsar's Premium Breakfast", description: "A power-packed breakfast plate featuring: Crispy Bacon, Egg, Sausage, Toast, Tea - the full morning hearty experience, only at Quinsar.", price: "KES 380", image: "/images/breakfast2.jpg" },
+        { name: "Minji Breakfast Combo", description: "Soft-cooked green peas (Minji) simmered with onions, tomatoes, and mild spices, served with your choice.", price: "KES 250 - KES 380", image: "/images/minji-breakfast.jpg" },
+        { name: "Gizzards Combo Breakfast", description: "Delicious tender, spiced chicken gizzards, sauteed with onions, tomatoes, and fresh herbs, served with your choice of: Chapati, Nduma, Rice or Chapati and Nduma", price: "KES 340 - KES 380", image: "/images/gizzard.jpg" },
+        { name: "Njahi Combo Breakfast", description: "A hearty serving of slow-cooked black beans (Njahi) simmered with onions, tomatoes, and mild spices, served with your choice of: Nduma or Ngwaci at KES 250, Chapati or Rice at KES 320, Nduma Egg, Veges at KES 380 ", price: "KES 250 - KES 380", image: "/images/njahi.jpg" },
+        { name: "Mukimo Combo Breakfast", description: "Served with 2 Boiled Eggs and Veges at KES 340, Minji and Veges at KES 340, Gizzards and Veges at KES 400, Goat Soup at KES 350", price: "KES 340 - KES 400", image: "/images/minji.jpg" },
       ],
     },
     {
@@ -27,9 +28,9 @@ export default function MenuPage() {
       title: "Soups",
       icon: Soup,
       items: [
-        { name: "Easy Goat Soup", description: "Hearty goat soup with traditional spices", price: "KES 450" },
-        { name: "Healthy Chicken Kienyeji Soup", description: "Free-range chicken soup with fresh vegetables", price: "KES 400" },
-        { name: "Creamy Pumpkin Soup", description: "Smooth and creamy pumpkin soup", price: "KES 350" },
+        { name: "Easy Goat Soup", description: "Hearty goat soup with traditional spices", price: "KES 450", image: "/images/soup1.jpg" },
+        { name: "Healthy Chicken Kienyeji Soup", description: "Free-range chicken soup with fresh vegetables", price: "KES 400", image: "/images/soup2.jpg" },
+        { name: "Creamy Pumpkin Soup", description: "Smooth and creamy pumpkin soup", price: "KES 350", image: "/images/soup3.jpg" },
       ],
     },
     {
@@ -37,8 +38,9 @@ export default function MenuPage() {
       title: "Steaks",
       icon: Beef,
       items: [
-        { name: "Beef Tenderloin Steak", description: "Premium beef tenderloin, served with ugali, rice, or chapati", price: "KES 500" },
-        { name: "Classic Flame-Grilled Beef Steak", description: "Flame-grilled beef steak, served with ugali, rice, or chapati", price: "KES 480" },
+        { name: "Beef Tenderloin Steak", description: "Premium beef tenderloin, served with ugali, rice, or chapati", price: "KES 500", image: "/images/steak1.jpg" },
+        { name: "Classic Flame-Grilled Beef Steak", description: "Flame-grilled beef steak, served with ugali, rice, or chapati", price: "KES 480", image: "/images/steak2.jpg" },
+        { name: "Beef Tenderloin Steak", description: "Premium beef tenderloin, served with ugali, rice, or chapati", price: "KES 500", image: "/images/steak3.jpg" },
       ],
     },
     {
@@ -46,8 +48,8 @@ export default function MenuPage() {
       title: "Chicken",
       icon: Utensils,
       items: [
-        { name: "Traditional Kienyeji Chicken", description: "Free-range chicken, served with ugali, rice, chapati, or chips", price: "KES 450" },
-        { name: "Chicken Stir-Fry", description: "Tender chicken stir-fry, served with ugali, rice, chapati, or chips", price: "KES 420" },
+        { name: "Traditional Kienyeji Chicken", description: "Free-range chicken, served with ugali, rice, chapati, or chips", price: "KES 450", image: "/images/chicken1.jpg" },
+        { name: "Chicken Stir-Fry", description: "Tender chicken stir-fry, served with ugali, rice, chapati, or chips", price: "KES 420", image: "/images/chicken2.jpg" },
       ],
     },
     {
@@ -55,8 +57,8 @@ export default function MenuPage() {
       title: "Fish",
       icon: Fish,
       items: [
-        { name: "Pan-Fried Fish Fillets", description: "Fresh fish fillets pan-fried to perfection", price: "KES 400" },
-        { name: "Whole Wet-Fried Tilapia", description: "Whole tilapia wet-fried with traditional spices", price: "KES 450" },
+        { name: "Pan-Fried Fish Fillets", description: "Fresh fish fillets pan-fried to perfection", price: "KES 400", image: "/images/fish1.jpg" },
+        { name: "Whole Wet-Fried Tilapia", description: "Whole tilapia wet-fried with traditional spices", price: "KES 450", image: "/images/fish2.jpg" },
       ],
     },
     {
@@ -64,9 +66,9 @@ export default function MenuPage() {
       title: "Vegetarian & Stews",
       icon: LeafyGreen,
       items: [
-        { name: "Managu", description: "African nightshade with your choice of accompaniment", price: "KES 250" },
-        { name: "Njahi Stew", description: "Black beans stew, served with your choice of accompaniment", price: "KES 300" },
-        { name: "Githeri", description: "Mixed cereal (beans and maize), traditional Kenyan dish", price: "KES 280" },
+        { name: "Managu", description: "African nightshade with your choice of accompaniment", price: "KES 250", image: "/images/vegetarian1.jpg" },
+        { name: "Njahi Stew", description: "Black beans stew, served with your choice of accompaniment", price: "KES 300", image: "/images/vegetarian2.jpg" },
+        { name: "Githeri", description: "Mixed cereal (beans and maize), traditional Kenyan dish", price: "KES 280", image: "/images/vegetarian3.jpg" },
       ],
     },
     {
@@ -74,9 +76,10 @@ export default function MenuPage() {
       title: "Chips",
       icon: Utensils,
       items: [
-        { name: "Chips Masala", description: "Crispy chips with masala spices", price: "KES 200" },
-        { name: "Chips Eggs Fried", description: "Chips served with fried eggs", price: "KES 250" },
-        { name: "Chips Sausage", description: "Chips served with sausages", price: "KES 280" },
+        { name: "Chips Masala", description: "Crispy chips with masala spices", price: "KES 200", image: "/images/chips1.jpg" },
+        { name: "Chips Eggs Fried", description: "Chips served with fried eggs", price: "KES 250", image: "/images/chips2.jpg" },
+        { name: "Chips Sausage", description: "Chips served with sausages", price: "KES 280", image: "/images/chips3.jpg" },
+        { name: "Chips Sausage", description: "Chips served with sausages", price: "KES 280", image: "/images/chips4.jpg" },
       ],
     },
     {
@@ -84,9 +87,9 @@ export default function MenuPage() {
       title: "Snacks",
       icon: Cookie,
       items: [
-        { name: "Mandazi", description: "Classic Kenyan sweet fried bread", price: "KES 50" },
-        { name: "Samosa", description: "Crispy pastry filled with spiced meat or vegetables", price: "KES 80" },
-        { name: "Sausages", description: "Grilled sausages - perfect snack", price: "KES 150" },
+        { name: "Mandazi", description: "Classic Kenyan sweet fried bread", price: "KES 50", image: "/images/snacks1.jpg" },
+        { name: "Samosa", description: "Crispy pastry filled with spiced meat or vegetables", price: "KES 80", image: "/images/snacks2.jpg" },
+        { name: "Sausages", description: "Grilled sausages - perfect snack", price: "KES 150", image: "/images/snacks3.jpg" },
       ],
     },
     {
@@ -94,9 +97,10 @@ export default function MenuPage() {
       title: "Desserts",
       icon: IceCream,
       items: [
-        { name: "Ice Cream - Vanilla", description: "Creamy vanilla ice cream", price: "KES 150" },
-        { name: "Ice Cream - Strawberry", description: "Fresh strawberry ice cream", price: "KES 150" },
-        { name: "Ice Cream - Caramel", description: "Rich caramel ice cream", price: "KES 150" },
+        { name: "Ice Cream - Vanilla", description: "Creamy vanilla ice cream", price: "KES 150", image: "/images/dessert1.jpg" },
+        { name: "Ice Cream - Strawberry", description: "Fresh strawberry ice cream", price: "KES 150", image: "/images/dessert2.jpg" },
+        { name: "Ice Cream - Caramel", description: "Rich caramel ice cream", price: "KES 150", image: "/images/dessert3.jpg" },
+        { name: "Ice Cream - Caramel", description: "Rich caramel ice cream", price: "KES 150", image: "/images/dessert4.jpg" },
       ],
     },
     {
@@ -104,9 +108,10 @@ export default function MenuPage() {
       title: "Beverages",
       icon: GlassWater,
       items: [
-        { name: "African Tea", description: "Traditional Kenyan tea, hot and aromatic", price: "KES 80" },
-        { name: "Fresh Juices", description: "Selection of fresh fruit juices", price: "KES 150" },
-        { name: "Milkshakes", description: "Creamy milkshakes in various flavors", price: "KES 180" },
+        { name: "African Tea", description: "Traditional Kenyan tea, hot and aromatic", price: "KES 80", image: "/images/beverage1.jpg" },
+        { name: "Fresh Juices", description: "Selection of fresh fruit juices", price: "KES 150", image: "/images/beverage2.jpg" },
+        { name: "Fresh Juices", description: "Selection of fresh fruit juices", price: "KES 150", image: "/images/beverage3.jpg" },
+        { name: "Milkshakes", description: "Creamy milkshakes in various flavors", price: "KES 180", image: "/images/beverage4.jpg" },
       ],
     },
   ];
@@ -137,7 +142,7 @@ export default function MenuPage() {
                   <Card key={index} className="overflow-hidden transition-shadow hover:shadow-lg">
                     <div className="relative h-48 w-full">
                       <Image
-                        src={`/images/pexels-${section.id === "breakfast" ? "helenalopes-693269" : section.id === "beverages" ? "valeriya-1484516" : section.id === "soups" ? "fotios-photos-776538" : section.id === "fish" ? "chanwalrus-958545" : "pixabay-262978"}.jpg`}
+                        src={item.image}
                         alt={item.name}
                         fill
                         className="object-cover"
