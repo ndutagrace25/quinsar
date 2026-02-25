@@ -30,7 +30,7 @@ export default function ContactPage() {
       <div className="mb-12 text-center">
         <h1 className="mb-4 text-4xl font-bold md:text-5xl">Contact Us</h1>
         <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-          Get in touch with us. We'd love to hear from you!
+          Get in touch with us. We&apos;d love to hear from you!
         </p>
       </div>
 
@@ -51,10 +51,10 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent>
               <a
-                href="tel:+1234567890"
+                href="tel:+254726771771"
                 className="text-lg font-semibold text-primary hover:underline"
               >
-                +123 456 7890
+                +254 726 771 771
               </a>
             </CardContent>
           </Card>
@@ -76,11 +76,11 @@ export default function ContactPage() {
                 asChild
                 className="w-full"
                 onClick={() => {
-                  window.open("https://wa.me/1234567890", "_blank");
+                  window.open("https://wa.me/+254726771771", "_blank");
                 }}
               >
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/+254726771771"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -151,7 +151,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <CardTitle>Opening Hours</CardTitle>
-                  <CardDescription>When we're open</CardDescription>
+                  <CardDescription>When we&apos;re open</CardDescription>
                 </div>
               </div>
             </CardHeader>
@@ -159,7 +159,7 @@ export default function ContactPage() {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="font-medium">Daily</span>
-                  <span className="text-muted-foreground">6:00 AM - 10:00 PM</span>
+                  <span className="text-muted-foreground">4:30 AM - 11:00 PM</span>
                 </div>
               </div>
             </CardContent>
@@ -170,7 +170,7 @@ export default function ContactPage() {
         <Card>
           <CardHeader>
             <CardTitle>Send us a Message</CardTitle>
-            <CardDescription>Fill out the form below and we'll get back to you</CardDescription>
+            <CardDescription>Fill out the form below and we&apos;ll get back to you</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
