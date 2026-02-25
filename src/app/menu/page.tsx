@@ -107,16 +107,28 @@ export default function MenuPage() {
         <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
           Discover our carefully crafted selection of dishes, made with the finest ingredients
         </p>
-        <a
-          href="/images/Breakfast%20Menu.pdf"
-          download="Quinsar-Breakfast-Menu.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-primary px-6 py-3 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-        >
-          <FileDown className="h-5 w-5" aria-hidden />
-          Download Breakfast Menu (PDF)
-        </a>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <a
+            href="/images/Breakfast%20Menu.pdf"
+            download="Quinsar-Breakfast-Menu.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 sm:text-base sm:px-6"
+          >
+            <FileDown className="h-5 w-5 shrink-0" aria-hidden />
+            Download Breakfast Menu (PDF)
+          </a>
+          <a
+            href="/images/Menu.pdf"
+            download="Quinsar-Main-Dishes-Menu.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 sm:text-base sm:px-6"
+          >
+            <FileDown className="h-5 w-5 shrink-0" aria-hidden />
+            Download Main Dishes Menu (PDF)
+          </a>
+        </div>
       </div>
 
       <div className="space-y-16">
