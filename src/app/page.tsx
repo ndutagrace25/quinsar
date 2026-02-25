@@ -73,7 +73,7 @@ export default function Home() {
               </div>
               <h3 className="mb-2 text-xl font-semibold">Prime Location</h3>
               <p className="text-muted-foreground">
-                Conveniently located in the heart of the Nairobi CBD with easy access
+                Conveniently located next to Total Rhino, Muranga Stage in CBD
               </p>
             </div>
             <div className="text-center">
