@@ -1,16 +1,13 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Coffee, Soup,  Cookie,  GlassWater, Egg, FileDown } from "lucide-react";
+import { Coffee, Soup, Cookie, GlassWater, Egg, FileDown, IceCreamBowl, Utensils, LeafyGreen, Search } from "lucide-react";
 
-export const metadata = {
-  title: "Menu - Quinsar Restaurant",
-  description: "Explore our delicious menu featuring breakfast, main courses, drinks, and chef's specials.",
-};
-
-export default function MenuPage() {
-  const menuSections = [
+const menuSections = [
     {
       id: "breakfast",
       title: "Breakfast",
@@ -97,8 +94,152 @@ export default function MenuPage() {
         { name: "Chapati Rollex Mayai", description: "", price: "KES 180", image: "/images/rolex.jpg" },
       ],
     },
+    {
+      id: "lunch_and_dinner",
+      title: "Lunch and Dinner",
+      icon: IceCreamBowl,
+      items: [{
+        name: "Beef Tenderloin Steak",
+        description: "Served with Ugali/Rice or Chapati at KES 600, Served with Chips/Mukimo at KES 700, Served with Pilau or Chips Masala at KES 720, Plain at KES 550",
+        price: "KES 550 - KES 720",
+        image: "/images/steak.jpg",
+      },
+      {
+        name: "Classic Beef Steak",
+        description: "A thick, juicy cut of prime beef, flame-grilled to your liking and finished with a touch of green veges. Beef steak options: Served with Ugali/Rice or Chapati — Fry KES 450, Stew KES 500. Served with Chips/Mukimo — Fry KES 550, Stew KES 600. Served with Pilau or Chips Masala — Fry KES 600, Stew KES 650. Plain — Fry KES 400, Stew KES 450.",
+        price: "KES 400 - KES 650",
+        image: "/images/steak2.jpg",
+      },
+      {
+        name: "Matumbo / Strips - Wet Fry",
+        description: "Tender beef tripe, slow-boiled and then pan-fried with onions, fresh coriander, and a touch of spicy seasoning. (Ask for dry-fry or gravy-style as your option.) Matumbo wet fry: Served with Ugali/Rice or Chapati KES 380. Served with Chips/Mukimo KES 480. Served with Pilau or Chips Masala KES 530.",
+        price: "KES 380 - KES 530",
+        image: "/images/matumbo_wet.jpg",
+      },
+      {
+        name: "Matumbo Dry Fry",
+        description: "Matumbo dry fry options: Served with Ugali/Rice or Chapati KES 420. Served with Chips/Mukimo KES 520. Served with Pilau or Chips Masala KES 580. Plain KES 320.",
+        price: "KES 320 - KES 580",
+        image: "/images/matumbo.png",
+      },
+      {
+        name: "Traditional Kienyeji Chicken",
+        description: "Tender kienyeji chicken, naturally raised and simmered in traditional herbs. A taste of real Kenyan heritage on your plate. Chicken wet/dry/boiled: Served with Ugali/Rice or Chapati KES 550. Served with Chips/Mukimo KES 600. Served with Pilau or Chips Masala KES 650. Plain KES 500.",
+        price: "KES 500 - KES 650",
+        image: "/images/kienyeji.jpg",
+      },
+      {
+        name: "Chicken Stir Fry Boneless",
+        description: "Tender strips of boneless chicken, wok-tossed with crisp bell peppers, onions and carrots in a light ginger-garlic soy glaze. Chicken stir fry: Served with Ugali/Rice or Chapati KES 600. Served with Chips/Mukimo KES 650. Served with Pilau or Chips Masala KES 700. Plain KES 520.",
+        price: "KES 520 - KES 700",
+        image: "/images/boneless_chicken.jpg",
+      },
+      {
+        name: "Whole Tilapia - Fresh Wet Fry",
+        description: "Locally sourced fish, prepared on order. Whole fresh tilapia, cleaned and pan-fried in a flavorful blend of onions, tomatoes, garlic and coriander, then simmered in a light, aromatic broth. Ask for Tilapia Fry—crispy on the outside, tender inside, a true Kenyan classic done the Quinsar way. Tilapia whole fish wet/fry: Served with Ugali/Rice or Chapati KES 600. Served with Chips/Mukimo KES 700. Served with Pilau or Chips Masala KES 750. Plain KES 550.",
+        price: "KES 550 - KES 750",
+        image: "/images/tilapia.jpg",
+      },
+      {
+        name: "Pan Fried Fish Fillet",
+        description: "Fresh fish fillet, lightly seasoned and pan-fried to a golden crisp, then finished with a squeeze of lemon and fresh herbs. Pan fried fish fillet wet/dry: Served with Ugali/Rice or Chapati KES 600. Served with Chips KES 650. Served with Pilau or Chips Masala KES 750. Plain KES 520.",
+        price: "KES 520 - KES 750",
+        image: "/images/food2.jpg",
+      },
+      ],
+    },
+    {
+      id: "chips",
+      title: "Chips",
+      icon: Utensils,
+      items: [
+        { name: "Chips Salad", description: "", price: "KES 200", image: "/images/salad.jpg" },
+        { name: "Chips Masala", description: "", price: "KES 250", image: "/images/chips_masala.jpg" },
+        { name: "Chips Eggs Fried", description: "", price: "KES 320", image: "/images/chips_egg.jpg" },
+        { name: "Chips Samosa", description: "", price: "KES 270", image: "/images/chips_samosa.avif" },
+        { name: "Chips, Sausage, Egg", description: "", price: "KES 320", image: "/images/chips_sausage.jpg" },
+        { name: "Chips Sausage", description: "", price: "KES 270", image: "/images/chipsS.jpg" },
+        { name: "Mini Chips Samosa", description: "", price: "KES 250", image: "/images/chips_samosa.avif" },
+        { name: "Mini Chips Sausage", description: "", price: "KES 250", image: "/images/chipsS.jpg" },
+        { name: "Chips & Chicken (Kienyeji)", description: "", price: "KES 580", image: "/images/chips_chicken.jpg" },
+      ],
+    },
+    {
+      id: "healthy_kick",
+      title: "Healthy Kick",
+      icon: LeafyGreen,
+      items: [
+        {
+          name: "Indigenous Managu (African Nightshade)",
+          description: "Freshly harvested indigenous greens, gently sauteed with onions, tomatoes, and a hint of garlic. Managu: Served with Ugali/Rice/Chapati/Ngwaci KES 300. Served with Nduma/Mukimo KES 300. Plain KES 120.",
+          price: "KES 120 - KES 300",
+          image: "/images/managu.png",
+        },
+        {
+          name: "Njahi (Black Beans Stew)",
+          description: "Soft-cooked black beans simmered in a delicious blend of onions, tomatoes, garlic and mild spices, with a touch of coriander for extra flavour. Njahi served with Veges KES 350. Served with Rice/Chapati KES 380. Served with Nduma/Ngwaci/Mukimo KES 380. Plain KES 280.",
+          price: "KES 280 - KES 380",
+          image: "/images/njahi.jpg",
+        },
+        {
+          name: "Minji (Green Peas Stew)",
+          description: "Tender green peas simmered in a savory sauce of onions, tomatoes, garlic, and fresh herbs. Minji: Served with Rice/Chapati/Ugali KES 350. Served with Nduma/Ngwaci/Mukimo KES 380. Plain KES 280.",
+          price: "KES 280 - KES 380",
+          image: "/images/minji_new.png",
+        },
+        {
+          name: "Githeri with Mixed Cereals",
+          description: "A wholesome, Kenyan classic made from a hearty mix of boiled maize, beans, and peas, sauteed with onions, tomatoes, carrots, and fresh herbs. Githeri Veges KES 300. Githeri served with Rice KES 400. Githeri served with Chapati KES 350. Githeri Managu KES 400. Githeri Beef KES 550.",
+          price: "KES 300 - KES 550",
+          image: "/images/githeri.png",
+        },
+      ],
+    },
+    {
+      id: "desserts",
+      title: "Desserts",
+      icon: IceCreamBowl,
+      items: [
+        {
+          name: "Ice Cream Delights",
+          description: "A cool and creamy treat available in a variety of classic and fruity flavors. Ice cream scoop vanilla KES 200. Ice cream scoop strawberry KES 200. Ice cream caramel KES 200.",
+          price: "KES 200",
+          image: "/images/icecream.png",
+        },
+        {
+          name: "Shake Up Your Day",
+          description: "Caramel milkshake KES 390. Vanilla milkshake KES 390. Strawberry milkshake KES 390.",
+          price: "KES 390",
+          image: "/images/shake.png",
+        },
+        {
+          name: "Fresh Crafted Juices",
+          description: "Made fresh from 100% real fruits, no added sugar, no preservatives. Enjoy a naturally refreshing glass of health and flavor in every sip. Passion juice KES 200. Mango juice KES 200. Cocktail juice KES 200.",
+          price: "KES 200",
+          image: "/images/juice.png",
+        },
+      ],
+    },
 
   ];
+
+export default function MenuPage() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredSections = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return menuSections;
+    return menuSections
+      .map((section) => ({
+        ...section,
+        items: section.items.filter(
+          (item) =>
+            item.name.toLowerCase().includes(q) ||
+            item.description.toLowerCase().includes(q)
+        ),
+      }))
+      .filter((section) => section.items.length > 0);
+  }, [searchQuery]);
 
   return (
     <div className="container px-4 py-12 md:py-16">
@@ -129,10 +270,32 @@ export default function MenuPage() {
             Download Main Dishes Menu (PDF)
           </a>
         </div>
+
+        <div className="mx-auto mt-8 max-w-md">
+          <label htmlFor="menu-search" className="sr-only">
+            Search menu
+          </label>
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden />
+            <input
+              id="menu-search"
+              type="search"
+              placeholder="Search dishes (e.g. matu, chicken, chips)"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full rounded-lg border border-input bg-background py-2.5 pl-10 pr-4 text-base placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            />
+          </div>
+        </div>
       </div>
 
       <div className="space-y-16">
-        {menuSections.map((section) => {
+        {filteredSections.length === 0 ? (
+          <p className="py-12 text-center text-muted-foreground">
+            No dishes match &quot;{searchQuery}&quot;. Try a different search.
+          </p>
+        ) : (
+        filteredSections.map((section) => {
           const Icon = section.icon;
           return (
             <div key={section.id} id={section.id} className="scroll-mt-20">
@@ -166,7 +329,8 @@ export default function MenuPage() {
               </div>
             </div>
           );
-        })}
+        })
+        )}
       </div>
 
       {/* Daily Offers Section */}
